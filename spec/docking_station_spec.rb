@@ -23,3 +23,14 @@ it 'release bike' do
     #verify
     assert_equals(result, true)
 end
+
+it 'does not release bikes when there are none available' do
+    #set up
+    docking_station = DockingStation.new
+
+    #execute
+    result = docking_station.release == 'no bikes available'
+    
+    #verify
+    assert_equals(result, true)
+end

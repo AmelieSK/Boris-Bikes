@@ -12,7 +12,11 @@ class DockingStation
     end
 
     def release
-        @bikes.pop
+        if @bikes.length == 0
+            return 'no bikes available'
+        else
+            return @bikes.pop
+        end
     end
 
 end
