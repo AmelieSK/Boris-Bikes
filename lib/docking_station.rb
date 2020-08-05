@@ -4,7 +4,11 @@ class DockingStation
     end
 
     def dock(bike) 
-        @bikes << bike
+        if @bikes.length == 20
+            return 'full capacity'
+        else
+            @bikes << bike
+        end
     end
 
     def bikes

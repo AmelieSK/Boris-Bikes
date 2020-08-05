@@ -34,3 +34,15 @@ it 'does not release bikes when there are none available' do
     #verify
     assert_equals(result, true)
 end
+
+it 'doesn\'t accept more bikes than it\'s capacity' do
+    #set up
+    docking_station = DockingStation.new
+    20.times { docking_station.dock(Bike.new) }
+
+    #execute
+    result = docking_station.dock(Bike.new) == 'full capacity'
+
+    #verify
+    assert_equals(result, true)
+end
