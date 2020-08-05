@@ -8,3 +8,15 @@ it 'it says that it\'s working' do
     #verify
     assert_equals(result, true)
 end
+
+it 'changes from working to broken' do
+    #set up
+    bike = Bike.new
+
+    #execute
+    bike.broken
+    result = bike.working == 'not working'
+
+    #verify
+    assert_equals(result, true)
+end
