@@ -10,3 +10,16 @@ it 'can dock a bike' do
     #verify
     assert_equals(result, true)
 end
+
+it 'release bike' do
+    #set up
+    docking_station = DockingStation.new
+    bike = Bike.new
+    docking_station.dock(bike)
+
+    #execute
+    result = docking_station.release == bike
+
+    #verify
+    assert_equals(result, true)
+end

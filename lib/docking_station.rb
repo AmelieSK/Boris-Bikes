@@ -10,4 +10,9 @@ class DockingStation
     def bikes
         @bikes
     end
+
+    def release
+        @bikes.pop
+    end
+
 end
