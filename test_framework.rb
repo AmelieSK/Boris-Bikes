@@ -1,3 +1,5 @@
+require 'colorize'
+
 def assert_equals(x,y)
     x == y
 end
@@ -6,8 +8,8 @@ def it(description, &block)
     print description + ' - '
     calc = block.call
     if calc == true
-        puts 'Its ok'
+        puts 'Passed'.green
     else 
-        puts 'They do not match'
+        puts 'Failed'.red
     end
 end

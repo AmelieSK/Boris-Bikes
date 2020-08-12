@@ -3,7 +3,7 @@ it 'it says that it\'s working' do
      bike = Bike.new
 
     #execute
-    result = bike.working == 'working'
+    result = bike.working?
 
     #verify
     assert_equals(result, true)
@@ -15,8 +15,8 @@ it 'changes from working to broken' do
 
     #execute
     bike.broken
-    result = bike.working == 'not working'
+    result = bike.working?
 
     #verify
-    assert_equals(result, true)
+    assert_equals(result, false)
 end
